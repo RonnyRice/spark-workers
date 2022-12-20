@@ -46,7 +46,7 @@
         }
       ],
       "stackType": "IPV4_ONLY",
-      "subnetwork": "projects/Spark-Project/regions/europe-west1/subnetworks/default"
+      "subnetwork": "projects/theta-signal-372122/regions/europe-west1/subnetworks/default"
     }
   ],
   "params": {
