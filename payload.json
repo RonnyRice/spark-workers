@@ -10,11 +10,12 @@
       "autoDelete": true,
       "boot": true,
       "deviceName": "slave1",
+      "diskEncryptionKey": {},
       "initializeParams": {
         "diskSizeGb": "10",
-        "diskType": "projects/theta-signal-372122/zones/us-west4-b/diskTypes/pd-balanced",
+        "diskType": "projects/theta-signal-372122/zones/europe-west1-b/diskTypes/pd-balanced",
         "labels": {},
-        "sourceImage": "projects/debian-cloud/global/images/debian-11-bullseye-v20221206"
+        "sourceImage": "projects/ubuntu-os-cloud/global/images/ubuntu-2004-focal-v20221213"
       },
       "mode": "READ_WRITE",
       "type": "PERSISTENT"
@@ -31,7 +32,7 @@
     "items": [
       {
         "key": "startup-script",
-        "value": "apt update\ncurl --output spark.tgz https://dlcdn.apache.org/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz\\napt -y install default-jdk\ntar -xzvf spark.tgz\n./spark-3.3.1-bin-hadoop3/sbin/start-slave.sh spark://spark-master.europe-west1-b.c.theta-signal-372122.internal:7077"
+        "value": "apt update\ncurl --output spark.tgz https://dlcdn.apache.org/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz\napt -y install default-jdk\ntar -xzvf spark.tgz\n./spark-3.3.1-bin-hadoop3/sbin/start-slave.sh spark://spark-master.europe-west1-b.c.theta-signal-372122.internal:7077"
       }
     ]
   },
