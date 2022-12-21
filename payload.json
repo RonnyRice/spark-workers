@@ -10,7 +10,6 @@
       "autoDelete": true,
       "boot": true,
       "deviceName": "slave1",
-      "diskEncryptionKey": {},
       "initializeParams": {
         "diskSizeGb": "10",
         "diskType": "projects/theta-signal-372122/zones/europe-west1-b/diskTypes/pd-balanced",
