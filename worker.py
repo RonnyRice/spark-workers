@@ -6,7 +6,7 @@ import json
 app = Flask(__name__)
 
 def get_api_key() -> str:
-    secret = "ya29.a0AX9GBdUV0MQp-Y6lI0QR6S3eo6DG-ashNfbaB4VswtDr-6J6AaejnLrSsXtz4peqD_rkk8FOLvYf0FQxPUMBjNMCYh5zmWLQQhERAQdoI4ObJw-ijs_To6c_lfCBS5z5j_3PeIHZuWObJM3OM04_ca92tYJaNtKb6oUZHuUdupoBNxARZ4_0oF0EKul3Snxm6NZBaV6RD2RUrVCyIZzMTjePNBbTe_QFJUpcM44aCgYKAVISARESFQHUCsbCHq7yJjssIMxQft9liyZFkw0238"
+    secret = os.environ.get("COMPUTE_API_KEY")
     if secret:
         return secret
     else:
@@ -38,7 +38,7 @@ def addWorker(token, num):
       tdata=json.load(p)
     tdata['name']='slave'+str(num)
     data=json.dumps(tdata)
-    url='https://www.googleapis.com/compute/v1/projects/Spark-Project/zones/europe-west1-b/instances'
+    url='https://www.googleapis.com/compute/v1/projects/theta-signal-372122/zones/europe-west1-b/instances'
     token = token.rstrip('\n')
     headers={"Authorization": "Bearer "+token}
     resp=requests.post(url,headers=headers, data=data)
